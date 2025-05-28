@@ -12,7 +12,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f7fafc;
+      background: linear-gradient(135deg, #2c5282 0%, #fbbf24 70%);
       color: #1a202c;
       line-height: 1.6;
       min-height: 100vh;
@@ -21,56 +21,108 @@
       align-items: center;
       padding: 2rem 1rem;
       scroll-behavior: smooth;
+      position: relative;
+      overflow-x: hidden;
+    }
+    /* UPSC Emblem-like faint background circle behind header */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(255 255 255 / 0.1) 60%, transparent 100%);
+      filter: drop-shadow(0 0 6px rgba(255 255 224 / 0.2));
+      pointer-events: none;
+      z-index: 0;
+    }
+    /* subtle repeated faint pattern behind main */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        radial-gradient(circle 4px at 20px 20px, rgba(255 255 255 / 0.05), transparent 50%),
+        radial-gradient(circle 4px at 60px 60px, rgba(255 255 255 / 0.05), transparent 50%);
+      background-repeat: repeat;
+      background-size: 80px 80px;
+      z-index: 0;
+      pointer-events: none;
     }
     h1, h2, h3 {
       font-weight: 700;
       margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 1;
     }
     h1 {
       font-size: 2.75rem;
-      color: #2c5282;
+      color: #fbbf24;
+      text-shadow:
+        0 0 8px #fbbf24aa,
+        0 0 16px #fbbf24bb;
     }
     h2 {
       font-size: 2rem;
-      color: #2b6cb0;
-      border-bottom: 3px solid #2b6cb0;
+      color: #fff;
+      border-bottom: 3px solid #fbbf24dd;
       padding-bottom: 0.3rem;
       margin-top: 3rem;
       margin-bottom: 1rem;
+      text-shadow: 0 0 5px #2c5282dd;
+      position: relative;
+      z-index: 1;
     }
     p {
       max-width: 720px;
       margin-bottom: 1rem;
       font-size: 1.1rem;
-      color: #2d3748;
+      color: #e6e6e6;
+      position: relative;
+      z-index: 1;
     }
     a {
-      color: #2b6cb0;
+      color: #ffe082;
       text-decoration: none;
-      border-bottom: 1.5px solid #2b6cb0;
+      border-bottom: 1.5px solid #ffe082aa;
       transition: color 0.3s ease, border-bottom-color 0.3s ease;
+      position: relative;
+      z-index: 1;
     }
     a:hover, a:focus {
-      color: #2c5282;
-      border-bottom-color: #2c5282;
+      color: #fff3bf;
+      border-bottom-color: #fff3bf;
       outline: none;
     }
     header {
       text-align: center;
       margin-bottom: 3rem;
       max-width: 900px;
+      position: relative;
+      z-index: 1;
     }
     .container {
       max-width: 900px;
       width: 100%;
+      background: rgba(0 0 0 / 0.3);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+      position: relative;
+      z-index: 1;
+      backdrop-filter: blur(8px);
     }
     /* Flowchart container styling */
     .flowchart {
-      background: #e9f4fb;
+      background: rgba(255 255 255 / 0.1);
       border-radius: 12px;
       padding: 2rem;
-      box-shadow: 0 4px 10px rgba(43, 108, 176, 0.1);
+      box-shadow: 0 4px 10px rgba(255 255 255, 0.2);
       margin-bottom: 3rem;
+      position: relative;
+      z-index: 2;
     }
     /* Infographic styling */
     .infographic {
@@ -78,21 +130,26 @@
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 2rem;
       margin-bottom: 3rem;
+      position: relative;
+      z-index: 2;
     }
     .infographic-card {
-      background: white;
+      background: rgba(255 255 255 / 0.15);
       border-radius: 12px;
       padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(60, 79, 99, 0.08);
+      box-shadow: 0 4px 12px rgba(255 255 255, 0.1);
       text-align: center;
       transition: box-shadow 0.3s ease;
+      color: #edf2f7;
     }
     .infographic-card:hover {
-      box-shadow: 0 8px 20px rgba(43, 108, 176, 0.2);
+      box-shadow: 0 8px 20px rgba(255 219 88, 0.8);
+      background: rgba(255 219 88 / 0.15);
+      color: #1a202c;
     }
     .icon {
       font-size: 3rem;
-      color: #2b6cb0;
+      color: #fbbf24;
       margin-bottom: 1rem;
     }
     /* Footer */
@@ -100,8 +157,10 @@
       margin-top: auto;
       padding: 1rem 0;
       font-size: 0.9rem;
-      color: #718096;
+      color: #ffe082cc;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
     /* Responsive typography */
     @media (max-width: 600px) {
@@ -114,23 +173,25 @@
     }
     /* Flowchart nodes */
     .node {
-      fill: #2b6cb0;
-      stroke: #2c5282;
+      fill: #fbbf24dd;
+      stroke: #fff3bfcc;
       stroke-width: 2;
+      filter: drop-shadow(0 0 1px rgba(0,0,0,0.25));
     }
     .node-text {
-      fill: white;
-      font-weight: 600;
+      fill: #2c5282;
+      font-weight: 700;
       font-size: 1rem;
       pointer-events: none;
       user-select: none;
     }
     /* Connectors */
     .connector {
-      stroke: #2c5282;
+      stroke: #fff3bfcc;
       stroke-width: 2;
       fill: none;
       marker-end: url(#arrowhead);
+      filter: drop-shadow(0 0 1px rgba(0,0,0,0.2));
     }
   </style>
 </head>
@@ -171,7 +232,7 @@
       <defs>
         <marker id="arrowhead" markerWidth="10" markerHeight="7"
                 refX="10" refY="3.5" orient="auto">
-          <polygon points="0 0, 10 3.5, 0 7" fill="#2c5282" />
+          <polygon points="0 0, 10 3.5, 0 7" fill="#fff3bfcc" />
         </marker>
       </defs>
 &nbsp;
