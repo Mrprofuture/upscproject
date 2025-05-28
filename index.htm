@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UPSC Prep & Legal-Tech Insights</title>
+  <style>
+    /* Reset and base styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7fafc;
+      color: #1a202c;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+      scroll-behavior: smooth;
+    }
+    h1, h2, h3 {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: 2.75rem;
+      color: #2c5282;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #2b6cb0;
+      border-bottom: 3px solid #2b6cb0;
+      padding-bottom: 0.3rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      max-width: 720px;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: #2d3748;
+    }
+    a {
+      color: #2b6cb0;
+      text-decoration: none;
+      border-bottom: 1.5px solid #2b6cb0;
+      transition: color 0.3s ease, border-bottom-color 0.3s ease;
+    }
+    a:hover, a:focus {
+      color: #2c5282;
+      border-bottom-color: #2c5282;
+      outline: none;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      max-width: 900px;
+    }
+    .container {
+      max-width: 900px;
+      width: 100%;
+    }
+    /* Flowchart container styling */
+    .flowchart {
+      background: #e9f4fb;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(43, 108, 176, 0.1);
+      margin-bottom: 3rem;
+    }
+    /* Infographic styling */
+    .infographic {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .infographic-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(60, 79, 99, 0.08);
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+    .infographic-card:hover {
+      box-shadow: 0 8px 20px rgba(43, 108, 176, 0.2);
+    }
+    .icon {
+      font-size: 3rem;
+      color: #2b6cb0;
+      margin-bottom: 1rem;
+    }
+    /* Footer */
+    footer {
+      margin-top: auto;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      color: #718096;
+      text-align: center;
+    }
+    /* Responsive typography */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+    /* Flowchart nodes */
+    .node {
+      fill: #2b6cb0;
+      stroke: #2c5282;
+      stroke-width: 2;
+    }
+    .node-text {
+      fill: white;
+      font-weight: 600;
+      font-size: 1rem;
+      pointer-events: none;
+      user-select: none;
+    }
+    /* Connectors */
+    .connector {
+      stroke: #2c5282;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+  </style>
+</head>
+<body>
+&nbsp;
+&nbsp;
+
+<header>
+  <h1>UPSC Preparation & Legal-Tech Insights</h1>
+  <p>A Professional Resource Hub for UPSC Aspirants Navigating the Legal-Tech Landscape</p>
+</header>
+&nbsp;
+&nbsp;
+
+<main class="container">
+&nbsp;
+&nbsp;
+
+  <section id="upsc-overview" aria-labelledby="upsc-overview-title">
+    <h2 id="upsc-overview-title">Overview of the UPSC Examination</h2>
+    <p>The Union Public Service Commission (UPSC) examination is among India’s most prestigious and challenging competitive exams. It offers aspirants the opportunity to serve in coveted civil services, including the Indian Administrative Service (IAS), Indian Police Service (IPS), and Indian Foreign Service (IFS).</p>
+    <p>Success in the UPSC requires a strategic blend of thorough subject knowledge, analytical ability, and consistent practice across prelims, mains, and interview stages.</p>
+  </section>
+&nbsp;
+&nbsp;
+
+  <section id="legal-tech" aria-labelledby="legal-tech-title">
+    <h2 id="legal-tech-title">Legal-Tech and UPSC Aspirants</h2>
+    <p>Legal technology (legal-tech) is revolutionizing how law is studied, practiced, and integrated into governance and policymaking. For UPSC aspirants, understanding legal-tech is vital to grasp the modern administrative and legal environments.</p>
+    <p>This knowledge empowers candidates to appreciate digitization in governance, legal frameworks modernization, and the role of technology in law enforcement and judicial processes.</p>
+  </section>
+&nbsp;
+&nbsp;
+
+  <section id="prep-flowchart" aria-labelledby="prep-flowchart-title" class="flowchart">
+    <h2 id="prep-flowchart-title">Strategic Preparation Flowchart</h2>
+    <svg width="100%" height="320" role="img" aria-label="Flowchart showing UPSC preparation stages" viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" >
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7"
+                refX="10" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#2c5282" />
+        </marker>
+      </defs>
+&nbsp;
+&nbsp;
+
+      <!-- Nodes -->
+      <rect x="380" y="10" width="140" height="50" rx="15" ry="15" class="node"/>
+      <text x="450" y="40" class="node-text" text-anchor="middle" dominant-baseline="middle">Understand Syllabus</text>
+&nbsp;
+&nbsp;
+
+      <rect x="70" y="110" width="160" height="50" rx="15" ry="15" class="node"/>
+      <text x="150" y="140" class="node-text" text-anchor="middle" dominant-baseline="middle">Prelims Preparation</text>
+&nbsp;
+&nbsp;
+
+      <rect x="310" y="110" width="180" height="50" rx="15" ry="15" class="node"/>
+      <text x="400" y="140" class="node-text" text-anchor="middle" dominant-baseline="middle">Mains Subject Mastery</text>
+&nbsp;
+&nbsp;
+
+      <rect x="570" y="110" width="160" height="50" rx="15" ry="15" class="node"/>
+      <text x="650" y="140" class="node-text" text-anchor="middle" dominant-baseline="middle">Answer Writing Practice</text>
+&nbsp;
+&nbsp;
+
+      <rect x="380" y="210" width="140" height="50" rx="15" ry="15" class="node"/>
+      <text x="450" y="240" class="node-text" text-anchor="middle" dominant-baseline="middle">Interview & Personality Development</text>
+&nbsp;
+&nbsp;
+
+      <!-- Connectors -->
+      <path class="connector" d="M450 60 L150 110" />
+      <path class="connector" d="M450 60 L400 110" />
+      <path class="connector" d="M450 60 L650 110" />
+      <path class="connector" d="M230 160 L450 210" />
+      <path class="connector" d="M490 160 L450 210" />
+      <path class="connector" d="M730 160 L450 210" />
+    </svg>
+  </section>
+&nbsp;
+&nbsp;
+
+  <section id="resources-infographic" aria-labelledby="resources-infographic-title">
+    <h2 id="resources-infographic-title">Key Resources for UPSC & Legal-Tech Learning</h2>
+    <div class="infographic" role="list">
+      <article class="infographic-card" role="listitem">
+        <div class="icon" aria-hidden="true">📚</div>
+        <h3>Standard Books</h3>
+        <p>NCERT textbooks, Laxmikanth for Polity, Spectrum for Modern History, and Law Journals for legal updates.</p>
+      </article>
+      <article class="infographic-card" role="listitem">
+        <div class="icon" aria-hidden="true">📰</div>
+        <h3>Current Affairs</h3>
+        <p>Daily newspapers, monthly magazines, and UPSC-relevant legal-tech news portals to stay updated.</p>
+      </article>
+      <article class="infographic-card" role="listitem">
+        <div class="icon" aria-hidden="true">📝</div>
+        <h3>Practice & Revision</h3>
+        <p>Mock tests, previous year papers, and answer writing coaching tailored to UPSC’s pattern.</p>
+      </article>
+      <article class="infographic-card" role="listitem">
+        <div class="icon" aria-hidden="true">💻</div>
+        <h3>Online Platforms</h3>
+        <p>MOOCs, legal-tech webinars, interactive tutorials, and YouTube channels focused on UPSC and governance.</p>
+      </article>
+    </div>
+  </section>
+&nbsp;
+&nbsp;
+
+</main>
+&nbsp;
+&nbsp;
+
+<footer>
+  <p>&copy; 2024 UPSC Legal-Tech Resource Hub. All rights reserved.</p>
+</footer>
+&nbsp;
+&nbsp;
+
+</body>
+</html>
+&nbsp;
+&nbsp;
